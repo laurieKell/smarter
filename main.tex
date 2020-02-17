@@ -21,29 +21,114 @@
 \maketitle
 
 \begin{abstract}
-MSE's often use assessment models with complex structural uncertainty designs examining multiway interactions. The paper examines different approaches to evaluate multi-way interactions and optimize grid design to capture the uncertainty in the system being modeled. The objective is not to make a perfect assessment model, but rather to capture the true dynamics of teh system that encapsulates the underlying uncertainty so a reference set along with a robustness set of models could be examined to optimize a control rule that coud be empirical or model based in nature.
+
+... 
 
 \end{abstract}
 
+\section*{Outline}
+
+\begin{itemize}
+\item Pose the hypothesis that the performance of Model Based MPs depend on the Production Function and that empirical MPs depend on the nature of the time series.
+\item Summarise the ALBIO grid, WRT the expected dynamics and the nature of the time series.
+\item Throw in some non-stationary, i.e. based on Hjort, Cury, Bjornstat, and ...
+\item Conduct MSE and use regression trees to identify what are the important uncertainties to resolve in order to meet the four management objectives of safety, status, yield and stability
+\item Is it the factors modelled by the grid scenarios or the emergent properties? this has important consequences for conditioning OMs. 
+\end{itemize}
+
 \section{Introduction}
 
+When conducting Management Strategy Evaluation (MSE) Operating Models (OMs) are commonly \citep[][]{} conditioned using stock assessment models, using a grid design to model structural uncertainty and data conflicts. For example the Indian Ocean Albacore MSE used Stock Synthesis to develop scenarios based on parameters that are difficult to estimate (i.e. M, steepness, and selectivity) and the relative weightings of the indices of abundance and the length data. The choice of OMs is important as the \textit{best} Management Procedure is determined by the choice of hypotheses represented by the OM.
+It is often not possible, however, to assign plausibility to the different scenarios, therefore the rationale for the grid design is of fundamental importance.
+
 MSE’s often use complicated grid based platforms to test alternative states of nature (e.g. CCSBT, Hillary et al. 2016 ). This was the case in initial development for Albacore in the Indian Ocean (Mosqueira and Sharma 2014 IOTC 2014-WPM 05) based on the Synthesis Assessment (Hoyle et. al. 2014). In that case 720 models were examined as the basis of the operating model. However, in the case of the Atlantic (Kell et. al. 2016), a much finer operating model structure was used (10 models) conditioned on the MultiFan Assessment (Anon 2012).  Thus, a whole range of approaches is available in the literature (Punt et. al. 2014) and we would examine if a full grid approach is relevant, or something simpler could work. 
-The objective of this work is to first examine the grid structure using GLM based methods to determine which variables effect the derived parameters like B0 and current stock size. Once the main and interaction effects that are important are figured a refined grid could be examined.
-In addition, the variance covariance matrix produced by the assessment and test whether we need a complex model structure for the MSE (CCSBT and IOTC) or do simpler structures perform just as well (ICCAT). We would use the Synthesis model and platform to examine this (with the Indian Ocean Albacore Assessment). Tools already developed (Mosqueira and Sharma 2014) could be further developed to examine across SS model platforms and to make it more generic for application in other assessments in the Atlantic. 
-The objective here is to examine whether main effects used in the grid are sufficient for robustness testing of the MP, and provide adequate contrast in the states of nature or do we need to apply all possible interactions in the grid as well, and can the variance co-variance matrix inform us of the scenarios that could be used.
+
+The objective of this work is to first explore the grid structure used for Indian Ocean albacore, i.e. to identify the characteristics that will impact the performance of the MPs being tested. There are two main properties of the OM in this regard, i.e. the expected dynamics as represented by the production function, and the nature of the time series.
+
+Therefore we first summarise the OM scenarios, before conducting an MSE for model based and empirical control rules. 
+
+\section{Material and Methods}
+\subsection{Material}
+
+\begin{itemize}
+    \item Use ALBIO OM
+\end{itemize}
+
+\section{Methods}
+
+\begin{itemize}
+    \item Summarise production functions and reference points wrt grid
+    \item Summarise time series, i.e. process error wrt grid
+    \item Run MP based on biomass dynamic model 
+    \item Run MP based on empirical Rule
+    \item Use regression tree to identify which rule performs best.
+    \item Identify the effect of uncertainty on performance.
+\end{itemize}
+
+\section{Results}
+
+\textbf{Figure \ref{fig:kobe}} Kobe phase plot for the full grid.
+
+\textbf{Figure \ref{fig:majuro}} Majuro  plot for the full grid.
+
+\textbf{Figure \ref{fig:ssb}} Time series of SSB for full grid.
+
+\textbf{Figure \ref{fig:grid}} Summary of grid scenarios.
+
+\textbf{Figure \ref{fig:pf}} Production functions for the full grid.
+
+\textbf{Figure \ref{fig:pe}} Process error for the full grid.
 
 
-\section{Some examples to get started}
+\bibliographystyle{alpha}
+\bibliography{sample}
+
+\section{Figures}
+\newpage\clearpage
+
+\begin{figure}
+\centering
+\includegraphics[width=0.75\textwidth]{alb-kobe1-1.png}
+\caption{\label{fig:kobe} Kobe phase plot for the full grid.}
+\end{figure}
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=0.75\textwidth]{alb-majuro1-1.png}
+\caption{\label{fig:majuro} Majuro  plot for the full grid.}
+\end{figure}
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=0.75\textwidth]{alb-ssb-1.png}
+\caption{\label{fig:ssb} Time series of SSB for full grid.}
+\end{figure}
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=0.75\textwidth]{alb-prior4-1.png}
+\caption{\label{fig:grid} Summary of grid scenarios.}
+\end{figure}
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=0.75\textwidth]{alb-pfunc-1.png}
+\caption{\label{fig:pf} Production functions for the full grid.}
+\end{figure}
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=0.75\textwidth]{alb-pe-1.png}
+\caption{\label{fig:pe} Process error for the full grid.}
+\end{figure}
+
+
+\end{document}
+
 
 \subsection{How to include Figures}
 
 First you have to upload the image file from your computer using the upload link the project menu. Then use the includegraphics command to include it in your document. Use the figure environment and the caption command to add a number and a caption to your figure. See the code for Figure \ref{fig:frog} in this section for an example.
-
-\begin{figure}
-\centering
-\includegraphics[width=0.3\textwidth]{frog.jpg}
-\caption{\label{fig:frog}This frog was uploaded via the project menu.}
-\end{figure}
 
 \subsection{How to add Comments}
 
@@ -104,8 +189,3 @@ You can upload a \verb|.bib| file containing your BibTeX entries, created with J
 You can find a \href{https://www.overleaf.com/help/97-how-to-include-a-bibliography-using-bibtex}{video tutorial here} to learn more about BibTeX.
 
 We hope you find Overleaf useful, and please let us know if you have any feedback using the help menu above --- or use the contact form at \url{https://www.overleaf.com/contact}!
-
-\bibliographystyle{alpha}
-\bibliography{sample}
-
-\end{document}
